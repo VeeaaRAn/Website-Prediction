@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+    
+    .container{
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+        }
+    
+    .image-container {
+            background-image: url('D:\Project\Final_tryout\website\templates\bg-image.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            text-align: center;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+          }
+    
+    .prediction{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+            background-color: #e0e0e0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+        }
+    
+    .remedy{
+            margin-bottom: 20px;
+            font-size: 20px;
+            padding: 10px 20px;
+            background: linear-gradient(to right, #6c63ff, #3b3294);
+            color: #fff;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+        }
+    
+        a {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="prediction">Prediction Result</h1>
+        <div class="image-container">
+            <p>Uploaded image:</p>
+            <img src="data:image/jpeg;base64,{{ base64_encoded_images }}">
+        </div>
+        <p class="prediction">Predicted class: {{ predicted_classes }}</p>
+        <p class="remedy">Remedy: {{rem}}
+            <br>
+            
+            <br>
+          
+        </p>
+        <a href="/">Go back home</a>
+    </div>
+</body>
+</html>
+
+
+
+

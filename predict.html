@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+          background: linear-gradient(to right, #6c63ff, #ff6663);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            text-align: center;
+            animation: slide-in 0.5s ease-out;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        form {
+          background-color: #fff;
+          padding: 40px;
+          border-radius: 10px;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          max-width: 600px;
+          text-align: center;
+      }
+
+        .design-element {
+            width: 100%;
+            height: 5px;
+            background-color: #6c63ff;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .design-element-2 {
+            width: 100%;
+            height: 2px;
+            background-color: #ff6663;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form  p{
+            margin-top: 20px;
+            background-color: #fff;
+        }
+
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form button:hover {
+            background-color: #3e8e41;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes slide-in {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Predict Image</h1>
+        <div class="design-element"></div>
+        <div class="design-element-2"></div>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction %}
+            <p>Prediction: {{ prediction }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

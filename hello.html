@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Prediction</title>
+    <style>
+        /* Add a container for the entire page */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        /* Style the form button */
+        #myForm button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style the image container */
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style the image */
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style the predicted class */
+        .image-container p {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Prediction</h1>
+    <form id="myForm" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <button type="submit">Predict Images</button> 
+    </form>
+ 
+
+<div class="image-container">
+    <img src="data:image/jpeg;base64,{{ base64_encoded_images }}">
+    <p>Predicted Class: {{ predicted_classes }}</p>
+</div>
+
+</body>
+</html>

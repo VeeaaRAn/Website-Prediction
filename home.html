@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            color: blueviolet;
+        }
+        #main{
+            text-align: center;
+        }
+        img{
+            border-radius: 25%;
+            border: 5px solid burlywood;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+
+        }
+        body{
+        
+            }
+        #image{
+                background: radial-gradient(#f9d5f2, #ff5e62);
+        }
+    </style>
+</head>
+<body>
+<div id='main'>
+{% load thumbnail %}
+<div id="image">
+{%for i in Post%}
+    <a href='{% url 'feed:detail' i.id %}'> 
+    <h1>{{i}}</h1><br>
+    
+    {% thumbnail i.image "200x200" crop="center" as im %}
+        <img src="{{im.url}}" width="{{ im.width}}" height="{{im.height}}">
+    {% endthumbnail%}
+   
+    <h1>{{i.prediction}}</h1>
+    <hr>
+    </a>
+{% endfor %}
+</div>
+</div>
+</body>
+</html>

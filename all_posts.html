@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Posts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+    
+       .container{
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+        }
+    
+       .post{
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+        }
+    
+       .post h2{
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+    
+       .post p{
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #666;
+        }
+    
+       .post img{
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    
+       .post a{
+            display: inline-block;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="prediction">All Posts</h1>
+        {% for post in posts %}
+            <div class="post">
+                <h2>Post {{ forloop.counter }}</h2>
+                <p>Text: {{ post.text }}</p>
+                <p>Image:</p>
+                <img src="{{ post.image.url }}" alt="Uploaded Image">
+                <p>Predicted Class: {{ post.prediction }}</p>
+                <a href="#">Read More</a>
+            </div>
+        {% endfor %}
+        {% if not posts %}
+            <p>No posts found.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

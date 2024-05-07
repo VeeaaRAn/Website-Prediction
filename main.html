@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        .custom-navbar {
+            background-color: #ff6347; /* Change this to your desired color */
+          }
+          body {
+            background: linear-gradient(to right, #f9d5d2, #e1b5b2);
+          }
+        #Head{
+          text-align: center;
+          padding: 10px;
+          display: flexbox;
+          color:black;
+          background-color: bisque;
+        }
+        #main{
+          padding: 20px 10px;
+          border: 2px solid transparent;
+        }
+      .filler{
+        padding-top: 5px;
+        font-size: 20px;
+      }
+      #secondmain{
+        padding: 20px 10px;
+        border: 2px solid transparent;
+      }
+      ul li p{
+        font-size: 20px;
+      }
+    #three{
+      padding: 20px 10px;
+      border: 2px solid transparent;
+    }
+    #list{
+      padding: 20px 10px;
+      border: 2px solid transparent;
+    }
+    ul{
+      padding-top: 10px;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    ul li{
+      margin-bottom: 10px;
+    }
+    ul li h5{
+      background-color:cornsilk;
+      display: inline-block;
+      font-size: larger;
+      margin-right: 10px;
+
+    }
+    .main-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 10px;
+    }
+    
+    p {
+      margin-bottom: 20px;
+    }
+    
+    h1 {
+      font-size: 36px;
+    }
+    
+    h2 {
+      font-size: 30px;
+    }
+    
+    h3 {
+      font-size: 24px;
+    }
+    
+    h4 {
+      font-size: 20px;
+    }
+    
+    h5 {
+      font-size: 18px;
+    }
+    
+    h6 {
+      font-size: 16px;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">HOME</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="predict/">Capsnet</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="retina/">Retinanetwork</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="all_post/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Data
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="all_post/">Data logging</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Link</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div id="Head">
+    <div><h1 id='heading'>Welcome to PlantCare.AI</h1></div>
+    <div id="subhead"><h3>Empowering Agriculture Through Technology</h3></div>
+    </div>
+    <div id="main" class="'main-container">
+      <h4 id="subtext" class="H">About PlantCare.AI</h4>
+      <p class="filler">'At PlantCare.AI, we are revolutionizing the way plant diseases are detected and managed. Our platform utilizes cutting-edge deep learning technology to analyze leaf images and provide accurate predictions of diseases affecting crops. By combining advanced algorithms with user-friendly interfaces, we aim to empower farmers and agricultural enthusiasts with the tools they need to protect their crops and maximize yields.'</p>
+    </div>
+    <div class="main" id="secondmain">
+      <h4 class="H">Why Plant Disease Prediction Matters</h4>
+      <p class="filler">Early detection of plant diseases is crucial for maintaining crop health and ensuring food security. By identifying diseases at their earliest stages, farmers can implement timely interventions to prevent widespread outbreaks and minimize crop losses. With PlantCare.AI, users can quickly and easily identify potential threats to their crops, enabling proactive management strategies and sustainable agricultural practices.</p>
+    </div>
+    <div id="three">
+      <h4>How It Works</h4>
+      <p class="filler">Our platform utilizes a sophisticated deep learning model trained on vast datasets of plant images to accurately identify disease symptoms in leaves. Users can simply upload images of affected leaves, and our algorithm analyzes them to provide instant predictions of the specific diseases present. Our intuitive interface makes it easy for users to interpret results and take appropriate action to mitigate risks and protect their crops.</p>
+    </div>
+    <div id="list">
+      <h4>Key Features</h4>
+      <ul>
+        <li><h5>Easy Upload:</h5><p>Seamlessly upload leaf images for analysis with just a few clicks.</p></li>
+        <li><h5>Fast Analysis:</h5><p>Receive instant predictions of plant diseases for timely decision-making.</p></li>
+        <li><h5>Accurate Results:</h5><p>Benefit from high-precision predictions generated by state-of-the-art deep learning technology.</p></li>
+        <li><h5>Accessible anywhere:</h5><p>Access our platform from any device with an internet connection for on-the-go disease monitoring.</p></li>
+        <li><h5>User-Friendly interface:</h5><p>Navigate our intuitive interface with ease, even for users with limited technical knowledge.</p></li>
+
+      </ul>
+    </div>
+</body>
+</html>
